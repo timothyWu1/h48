@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 22 fév. 2021 à 18:49
+-- Généré le : mar. 23 fév. 2021 à 08:47
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.5
 
@@ -31,18 +31,65 @@ CREATE TABLE `articles` (
   `id` int(11) NOT NULL,
   `titre` text CHARACTER SET utf8 NOT NULL,
   `image` text CHARACTER SET utf8 NOT NULL,
-  `tags` text CHARACTER SET utf8 DEFAULT NULL
+  `tags` text CHARACTER SET utf8 DEFAULT NULL,
+  `tags2` text CHARACTER SET utf8 DEFAULT NULL,
+  `tags3` text CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `articles`
 --
 
-INSERT INTO `articles` (`id`, `titre`, `image`, `tags`) VALUES
-(36, 'test9', '_AJG8248.jpg', NULL),
-(37, 'test3', '_AJG7403.jpg', NULL),
-(38, 'test4', '_AJG8213.jpg', NULL),
-(39, 'test5', '_AJG8279.jpg', NULL);
+INSERT INTO `articles` (`id`, `titre`, `image`, `tags`, `tags2`, `tags3`) VALUES
+(36, 'test9', '_AJG8248.jpg', NULL, NULL, NULL),
+(37, 'test3', '_AJG7403.jpg', NULL, NULL, NULL),
+(38, 'test4', '_AJG8213.jpg', NULL, NULL, NULL),
+(39, 'test5', '_AJG8279.jpg', NULL, NULL, NULL),
+(41, 'test90', '_AJG7128.jpg', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `filtres`
+--
+
+CREATE TABLE `filtres` (
+  `id` int(11) NOT NULL,
+  `Familles_de_Produits` text DEFAULT NULL,
+  `Composant` text DEFAULT NULL,
+  `Ambiance` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `filtres`
+--
+
+INSERT INTO `filtres` (`id`, `Familles_de_Produits`, `Composant`, `Ambiance`) VALUES
+(1, 'entrée', 'plat', 'convivialité'),
+(2, 'volaille', 'fromage', 'joie');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `firstname` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `surname` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `email` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `password` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `image` varchar(100) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `firstname`, `surname`, `email`, `password`, `image`) VALUES
+(0, 'maktooo1', 'killian1', 'lecornet1', 'maktooo@hotmail.com1', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'Logo.png');
 
 --
 -- Index pour les tables déchargées
@@ -55,6 +102,18 @@ ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `filtres`
+--
+ALTER TABLE `filtres`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -62,7 +121,13 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
+-- AUTO_INCREMENT pour la table `filtres`
+--
+ALTER TABLE `filtres`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
