@@ -56,7 +56,7 @@
     <nav class="nav d-flex justify-content-between">
       <a class="p-2 text-muted" href="#about">Menu</a>
       <a class="p-2 text-muted" href="#experience">Articles</a>
-      <a class="p-2 text-muted" href="connect/login.php">connexion</a>
+      <a class="p-2 text-muted" href="connect/login.php">killian</a>
       <a class="p-2 text-muted" href="#">A la Une</a>
 
     </nav>
