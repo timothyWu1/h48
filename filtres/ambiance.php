@@ -35,13 +35,12 @@
       <div class="col-4 pt-1">
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
+        <a class="blog-header-logo text-dark" href="#">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
         <form class="form-inline" method='POST'>
         <input class="form-control mr-sm-2" type="search" name="recherche" placeholder="Search" aria-label="Search">
-        <!-- <button class="btn btn-light" type="submit">Search</button> -->
         </li>
   </form>
 </nav>

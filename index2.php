@@ -35,23 +35,23 @@
       <div class="col-4 pt-1" style="display: contents;">
       <form method="post">
         <input class="form-control mr-sm-2" type="search" name="recherche" style="visibility: hidden;" placeholder="Search" aria-label="Search" value="produits">
-        <button type="submit" class="btn btn-success">Photos Produits</button>
+        <button type="submit" class="btn btn-success">Photos Produits</button><!-- ajout des tags pour les photos Produits -->
       </form>
       <form method="post">
         <input class="form-control mr-sm-2" type="search" name="recherche" style="visibility: hidden;" placeholder="Search" aria-label="Search" value="ambiance">
-        <button type="submit" class="btn btn-primary">Photos Ambiance</button>
+        <button type="submit" class="btn btn-primary">Photos Ambiance</button><!-- ajout des tags pour les photos Ambiance -->
       </form>
       
       
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
+        <a class="blog-header-logo text-dark" href="#">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
         <form class="form-inline" method='POST'>
         <input class="form-control mr-sm-2" type="search" name="recherche" placeholder="Search" aria-label="Search">
-        <!-- <button class="btn btn-light" type="submit">Search</button> -->
+        <!-- Systeme de recherche qui est lié a la BDD -->
         </li>
   </form>
 </nav>
@@ -61,7 +61,7 @@
       </div>
     </div>
   </header>
-
+<!-- Menu pour changer de page -->
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
       <a class="p-2 text-muted" href="#about">Menu</a>
@@ -77,7 +77,7 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
-      <img src="img/header.jpg" class="images_LBC" style="height: 100%; width: 100%; ">
+      <img src="img/header.jpg" class="images_LBC" style="height: 100%; width: 100%; "><!-- L'image du header -->
       </div>
     </section>
 

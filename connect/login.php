@@ -10,7 +10,7 @@
 <?php
 require('config.php');
 session_start();
-
+//Verifie si il y a bien un POST avec L'username / password avec un Password crypter en sha536 pour plus de securité
 if (isset($_POST['username'])){
   $username = ($_REQUEST['username']);
   $username = mysqli_real_escape_string($db, $username);
@@ -27,6 +27,9 @@ if (isset($_POST['username'])){
   }
 }
 ?>
+
+<!-- Le formulaire de connexion -->
+
 <form class="box" action="" method="post" name="login">
 <h1 class="box-title">Connexion</h1>
 <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">

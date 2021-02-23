@@ -35,7 +35,7 @@
       <div class="col-4 pt-1">
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
+        <a class="blog-header-logo text-dark" href="#">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
@@ -51,7 +51,7 @@
       </div>
     </div>
   </header>
-
+<!-- menu pour changer de page -->
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
       <a class="p-2 text-muted" href="../index2.php">Menu</a>
@@ -65,7 +65,7 @@
 
 $db = new PDO('mysql:host=localhost;dbname=h48', 'root','');
 
-
+// Select tout ce qu'il y a dans article pour pouvoir faire la modification
 $req = $db->prepare('SELECT * FROM articles WHERE id=:num');
 
 $req->bindValue(':num',$_GET['IDtable'],PDO::PARAM_INT);

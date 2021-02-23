@@ -35,13 +35,13 @@
       <div class="col-4 pt-1">
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
+        <a class="blog-header-logo text-dark" href="#">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
         <form class="form-inline" method='POST'>
         <input class="form-control mr-sm-2" type="search" name="recherche" placeholder="Search" aria-label="Search">
-        <!-- <button class="btn btn-light" type="submit">Search</button> -->
+        <!-- La recherche -->
         </li>
   </form>
 </nav>
@@ -51,7 +51,7 @@
       </div>
     </div>
   </header>
-
+<!-- Menu pour changer de filtre -->
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
       <a class="p-2 text-muted" href="#about">Menu</a>
@@ -62,7 +62,7 @@
 
     </nav>
   </div>
-
+<!-- Les filtres avec leurs boutons a coté -->
 <center style="padding-top:10%;">
 <div class="card" style="width: 24%; display: inline-flex; border: 0;"> 
     <strong><p>Familles de Produits</p></strong>
