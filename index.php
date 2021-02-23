@@ -17,7 +17,7 @@
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/header.css">
 
 
@@ -36,7 +36,7 @@
       <div class="col-4 pt-1">
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
+        <a class="blog-header-logo text-dark" href="">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
@@ -67,7 +67,7 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
-      <img src="img/header.jpg" class="images_LBC" style="height: 100%; width: 100%; ">
+      <img src="./img/header.jpg" class="images_LBC" style="height: 100%; width: 100%; ">
       </div>
     </section>
 
