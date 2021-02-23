@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Resume - Start Bootstrap Theme</title>
+  <title></title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,10 +32,20 @@
     <div class="container">
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 pt-1">
+      <div class="col-4 pt-1" style="display: contents;">
+      <form method="post">
+        <input class="form-control mr-sm-2" type="search" name="recherche" style="visibility: hidden;" placeholder="Search" aria-label="Search" value="produits">
+        <button type="submit" class="btn btn-success">Photos Produits</button>
+      </form>
+      <form method="post">
+        <input class="form-control mr-sm-2" type="search" name="recherche" style="visibility: hidden;" placeholder="Search" aria-label="Search" value="ambiance">
+        <button type="submit" class="btn btn-primary">Photos Ambiance</button>
+      </form>
+      
+      
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ Vente Retro</a>
+        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
@@ -58,7 +68,7 @@
       <a class="p-2 text-muted" href="#experience">Articles</a>
       <a class="p-2 text-muted" href="compte/annonce.php">Ajout</a>
       <a class="p-2 text-muted" href="connect/logout.php">Déconnexion</a>
-      <a class="p-2 text-muted" href="#">A la Une</a>
+      <a class="p-2 text-muted" href="filtres.php">Filtres</a>
 
     </nav>
   </div>
@@ -87,7 +97,7 @@ $conn = mysqli_connect($db_server,$db_user_login, $db_user_pass, $db_name);
  $recherche = isset($_POST['recherche']) ? $_POST['recherche'] : '';
 
  // la requete mysql
- $q = $conn->query("SELECT * FROM articles WHERE titre LIKE '%$recherche%' LIMIT 10");?>
+ $q = $conn->query("SELECT * FROM articles WHERE titre LIKE '%$recherche%' OR type LIKE '%$recherche%' ");?>
 
 <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
@@ -99,8 +109,8 @@ $conn = mysqli_connect($db_server,$db_user_login, $db_user_pass, $db_name);
 
   <div class="card" style="width: 24%; display: inline-flex; ">
   <?php
-        echo "<div id='img_div' >";
-      	echo "<img class=' card-img-top'  ' src='images/".$recherche['image']."' >";
+        echo "<div>";
+      	echo "<img class=' card-img-top' style='height: 100%; width: 100%;' ' src='images/".$recherche['image']."' >";
         echo "</div>";?>
   <div class="card-body">
     <p class="card-text"><?php echo $recherche['titre'] ; ?></p>
@@ -126,7 +136,7 @@ $conn = mysqli_connect($db_server,$db_user_login, $db_user_pass, $db_name);
   <script src="js/resume.min.js"></script>
 
   <footer class="blog-footer">
-  <p>🛒 Application Vente Retro</p>
+  <p>🛒 PassionFroid</p>
   <p>
     <a href="#">Revenir en haut</a>
   </p>

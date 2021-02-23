@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Resume - Start Bootstrap Theme</title>
+  <title></title>
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
       <div class="col-4 pt-1">
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ Vente Retro</a>
+        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
@@ -60,7 +60,8 @@
 
     </nav>
   </div>
-  <?php 
+
+  <?php
 
 $db = new PDO('mysql:host=localhost;dbname=h48', 'root','');
 
@@ -81,7 +82,10 @@ $liste = $req->fetch();
         
         <label for="titre">Titre</label><br>
         <input type="text" name="titre" class="form-control"  id="exampleFormControlInput1 titre" value="<?= $liste['titre'] ?>">
-
+        <center>
+          <input type="checkbox" name="type" id="type" value="Photos Ambiance"><strong style="margin-left: 1%;">Photos Ambiance</strong>
+          <input type="checkbox" name="type" id="type" style="margin-left: 10%;" value="Photos Produits"><strong style="margin-left: 1%;">Photos Produits</strong>
+        </center>
     </p>
     <p><center><input type="submit" class="btn btn-success" value="Enregistrer"></p></center>
 </form>

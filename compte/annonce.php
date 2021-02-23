@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Resume - Start Bootstrap Theme</title>
+  <title></title>
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
       <div class="col-4 pt-1">
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ Vente Retro</a>
+        <a class="blog-header-logo text-dark" href="http://127.0.0.1:8000">🛍️ PassionFroid</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <nav class="navbar navbar-light">
@@ -105,7 +105,7 @@ if (!empty($_POST)) {
 
         <input type="hidden" name="size" value="1000000">
   	   <div>
-  	  <input type="file" name="image">
+  	  <input type="file" name="image" multiple>
   	   </div>
 
         <button  name="upload" type="submit" class="btn btn-primary" id="OK">Enregistrer</button>
@@ -117,7 +117,7 @@ if (!empty($_POST)) {
 
 <a href="../index2.php#experience" class="btn btn-primary">Accueil</a>
 <footer class="blog-footer">
-  <p>🛒 Application Vente Retro</p>
+  <p>🛒 PassionFroid</p>
   <p>
     <a href="#">Revenir en haut</a>
   </p>

@@ -2,11 +2,12 @@
   <?php
 
 $db = new PDO('mysql:host=localhost;dbname=h48', 'root','');
-
-$req = $db->prepare('UPDATE articles SET titre=:titre WHERE id=:num LIMIT 1');
+  
+$req = $db->prepare('UPDATE articles SET titre=:titre, type=:type WHERE id=:num LIMIT 1');
 
 $req->bindValue(':num',$_POST['IDtable'],PDO::PARAM_INT);
 $req->bindValue(':titre', $_POST['titre'],PDO::PARAM_STR);
+$req->bindValue(':type', $_POST['type'],PDO::PARAM_STR);
 
 $executeIsOk = $req->execute();
 

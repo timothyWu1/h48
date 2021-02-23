@@ -3,7 +3,7 @@
 define('SERVER', 'localhost');
 define('USERNAME', 'root');
 define('PASSWORD', '');
-define('DB_NAME', 'projet_web');
+define('DB_NAME', 'h48');
  
 // Connexion à la base de données MySQL 
 $db = mysqli_connect(SERVER, USERNAME, PASSWORD, DB_NAME);
